@@ -1,0 +1,66 @@
+# kubernetes plugin - https://wiki.jenkins-ci.org/display/JENKINS/Kubernetes+Plugin
+kubernetes:latest
+ 
+#Docker Plugin - https://wiki.jenkins.io/display/JENKINS/Docker+Plugin
+docker-plugin:latest
+ 
+# explicitly pull in plugins previously pulled in by dependencies because of
+# security advisories  ...exclude plugins from
+# advisories that were not previously pulled in by what is listed above
+# also, as the plugins above raise their dependency levels for these plugins let's see about removing
+# items from the list below
+#
+# processed Sec Adv https://jenkins.io/security/advisory/2018-12-05/
+#
+htmlpublisher:latest
+mailer:latest
+config-file-provider:latest
+docker-commons:latest
+job-dsl:latest
+parameterized-trigger:latest
+pipeline-build-step:latest
+pipeline-input-step:latest
+script-security:latest
+credentials-binding:latest
+junit:latest
+workflow-durable-task-step:latest
+workflow-support:latest
+git:latest
+mercurial:latest
+subversion:latest
+github:latest
+github-branch-source:latest
+jira:latest
+workflow-cps:latest
+ 
+# Legacy stuff
+mapdb-api:latest
+ 
+# remote loader https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Remote+Loader+Plugin
+workflow-remote-loader:latest
+ 
+matrix-project:latest
+ssh-credentials:latest
+ 
+# Pipeline Utility Steps Plugin - https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Utility+Steps+Plugin
+pipeline-utility-steps:latest
+ 
+pipeline-stage-view:latest
+ 
+# some plugins helpful for global shared libs were broken out of workflow aggregator
+pipeline-github-lib:latest
+github-organization-folder:latest
+ 
+# Jenkins v2 specific
+matrix-auth:latest
+# aside from general upgrade, needed to bump blueocean to reconcile shared dependency
+# with k8s plugin
+blueocean:latest
+ 
+# Pipeline plugin - https://wiki.jenkins-ci.org/display/JENKINS/Pipeline+Plugin
+workflow-aggregator:latest
+ 
+# locale-plugin - This plugin controls the language of Jenkins
+locale:latest
+# Localization: Chinese (Simplified)0.0.1 -  https://wiki.jenkins-ci.org/display/JENKINS/Localization+zh+cn+Plugin
+localization-zh-cn:latest
