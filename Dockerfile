@@ -1,5 +1,5 @@
-#FROM  jenkinsci/jenkins:2.154-alpine
-FROM  jenkinsci/jenkins:2.154
+FROM  jenkinsci/jenkins:2.173-alpine
+#FROM  jenkinsci/jenkins:2.154
 
 # Jenkins image for CPE
 #
@@ -34,8 +34,8 @@ USER root
 #  && usermod -a -G 1001 jenkins
 
 
-RUN   groupadd -g 1001 docker \
-  && usermod -a -G 1001,0 jenkins
+#RUN   groupadd -g 1001 docker \
+#  && usermod -a -G 1001,0 jenkins
 
 COPY  init/jenkins  /usr/share/jenkins/ref
 
