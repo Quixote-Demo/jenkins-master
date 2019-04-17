@@ -1,4 +1,4 @@
-FROM  jenkinsci/jenkins:2.173-alpine
+FROM  jenkins/jenkins:2.173-alpine
 #FROM  jenkinsci/jenkins:2.154
 
 # Jenkins image for CPE
